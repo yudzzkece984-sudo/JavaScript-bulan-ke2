@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Coding JS – Edu Dashboard</title>
+    <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+
+    <header>
+        <h1>JavaScript Mastery By Rumah IT</h1>
+        <p>PAKSA - TERBIASA - BISA - LUARBIASA </p>
+    </header>
+
+    <main class="container">
+        
+        <section class="box" id="buttons-section">
+            <h2>Function Trigger Buttons</h2>
+            <button class="icon-btn icon" onclick="clearOutput()" title="Clear Output">🗑️</button>
+            <button class="icon-btn icon" onclick="addNewPharaghraph()" title="Add New Line">➕</button>
+            <br><br>
+
+            <div>
+                <button class="icon-btn" onclick="togglePopup('1')" title="Kalkulator Sederhana">F1</button>
+                <button class="icon-btn" onclick="togglePopup('2')" title="Cek Ganjil Genap">F2</button>
+                <button class="icon-btn" onclick="togglePopup('3')" title="Input Nama & Role">F3</button>
+                <button class="icon-btn" onclick="togglePopup('4')" title="Role Game Switch">F4</button>
+            </div>
+        </section>
+
+        <section class="box" id="output-section">
+            <h2>Output / Result</h2>
+            <div id="outputBox"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made for Programming Classs Batch 23 | EL Course &copy; 2025</p>
+    </footer>
+
+    <div id="popupModal1" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="togglePopup('1')">&times;</span>
+            <section>
+                <h2>Input Kalkulator (F1)</h2>
+                <form id="F1"> 
+                    <label for="firstNumber">Angka Pertama:</label>
+                    <input type="number" id="firstNumber" name="firstNumber" placeholder="Masukkan Angka Pertama" required />
+
+                    <label for="secondNumber">Angka Kedua:</label>
+                    <input type="number" id="secondNumber" name="secondNumber" placeholder="Masukkan Angka Kedua" required />
+
+                    <label for="operator">Operator (+, -, *, /):</label>
+                    <input type="text" id="operator" name="operator" placeholder="Masukkan Operator (+, -, *, /)" required />
+
+                    <button type="submit">Hitung</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="popupModal2" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="togglePopup('2')">&times;</span>
+            <section>
+                <h2>Cek Ganjil Genap (F2)</h2>
+                <form id="F2">
+                    <label for="numberF2">Masukkan Angka:</label>
+                    <input type="number" id="numberF2" name="number" placeholder="Masukkan angka" required /> 
+
+                    <button type="submit">Cek</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    
+    <div id="popupModal3" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="togglePopup('3')">&times;</span>
+            <section>
+                <h2>Input Nama & Role (F3)</h2>
+                <form id="F3">
+                    <label for="namaF3">Nama:</label>
+                    <input type="text" id="namaF3" name="nama" placeholder="Masukkan Nama" required />
+
+                    <label for="roleF3">Role Game:</label>
+                    <input type="text" id="roleF3" name="role" placeholder="Masukkan Role Game" required />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="popupModal4" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="togglePopup('4')">&times;</span>
+            <section>
+                <h2>Role Game Switch (F4)</h2>
+                <form id="F4">
+                    <label for="NickF4">Nickname:</label>
+                    <input type="text" id="NickF4" name="Nick" placeholder="Masukkan Nickname" required />
+
+                    <label for="RoleF4">Pilih Role (1=Exp, 2=Roam, 3=Gold, 4=Mid, 5=Hyper):</label>
+                    <input type="number" id="RoleF4" name="Role" placeholder="Masukkan Angka Role (1-5)" required />
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
