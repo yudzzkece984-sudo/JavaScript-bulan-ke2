@@ -1,0 +1,17 @@
+[
+    {
+        "nama": "PC Gaming Predator",
+        "harga": "Rp 25.000.000",
+        "spesifikasi": "Intel i9, 32GB RAM, RTX 4080"
+    },
+    {
+        "nama": "PC Kantor HP",
+        "harga": "Rp 7.500.000",
+        "spesifikasi": "Intel i5, 16GB RAM, Intel UHD Graphics"
+    },
+    {
+        "nama": "PC Editing Dell",
+        "harga": "Rp 18.000.000",
+        "spesifikasi": "AMD Ryzen 9, 32GB RAM, RTX 3060"
+    }
+]
